@@ -14,6 +14,12 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
