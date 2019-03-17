@@ -1,27 +1,32 @@
 import Typography from "typography"
 //import Wordpress2016 from "typography-theme-wordpress-2016"
 import bootstrapTheme from 'typography-theme-bootstrap'
+import './global.css';
 
 bootstrapTheme.overrideThemeStyles = () => {
   return {
-    body: {
-      backgroundColor: '#1a1a1a',
-    },
-    'h1, h2, h3, h4, h5, h6, a, li, code, footer': {
-      color: '#e5e5e5',
-    },
-    // h1: {
-    //   color: '#d62',
+    // 'h1, h2, h3, h4, h5, h6, a, li, code, footer': {
+    //   color: '#e5e5e5',
     // },
-    p: {
-      color: '#bbb',
+    'h1, h2, h3, h4, h5, h6, li': {
+      color: 'white',
     },
-    small: {
-      color: '#37f',
+    
+    body: {
+      color: 'var(--textAll)',
     },
+    // small: {
+    //   color: '#37f',
+    // },
+
     a: {
+      color: 'var(--textLink)',
       textDecoration: 'none',
     },
+    'a:hover': {
+      textDecoration: 'underline',
+    },
+
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
