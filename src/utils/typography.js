@@ -7,7 +7,7 @@ bootstrapTheme.overrideThemeStyles = () => {
     body: {
       backgroundColor: '#1a1a1a',
     },
-    'h1, h2, h3, h4, h5, h6, a, li, code': {
+    'h1, h2, h3, h4, h5, h6, a, li, code, footer': {
       color: '#e5e5e5',
     },
     // h1: {

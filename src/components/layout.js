@@ -90,10 +90,28 @@ class Layout extends React.Component {
             marginTop: '60px',
           }}
         >{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer
+          style={{
+            marginTop: rhythm(2.5),
+          }}
+        >
+          <a
+            href="https://mobile.twitter.com/manythunks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >twitter</a>{' '}
+          &bull;{' '}
+          <a
+            href="https://github.com/jsphkm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >github</a>{' '}
+          &bull;{' '}
+          <a
+            href="https://jsphkm.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >portfolio</a>
         </footer>
       </div>
     )
