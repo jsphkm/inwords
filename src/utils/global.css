@@ -7,7 +7,7 @@ body {
   --offblack: #1a1a1a;
   background-color: var(--offblack);
   /* --textLink: #6bf; */
-  --textLink: #777;
+  --textLink: #ffaf50;
   --textAll: #bbb;
   /* --inlineCode-bg: hsl(222, 14%, 25%); */
   /* --inlineCode-bg: hsl(222, 14%, 50%); */
