@@ -9,6 +9,11 @@ body {
   /* --textLink: #6bf; */
   --textLink: #777;
   --textAll: #bbb;
+  /* --inlineCode-bg: hsl(222, 14%, 25%); */
+  /* --inlineCode-bg: hsl(222, 14%, 50%); */
+  --inlineCode-bg: hsl(221, 51%, 48%);
+  /* --inlineCode-text: #e6e6e6; */
+  --inlineCode-text: #eee;
 }
 
 /* body.light {
@@ -96,7 +101,8 @@ pre[class*='language-'] ::selection {
   border-radius: 0.3em;
   background: var(--inlineCode-bg);
   color: var(--inlineCode-text);
-  padding: 0.15em 0.2em 0.05em;
+  /* padding: 0.15em 0.2em 0.05em; */
+  padding: 0.15em 0.25em 0.05em;
   white-space: normal;
 }
 
@@ -152,7 +158,8 @@ pre[class*='language-'] ::selection {
 }
 
 .token.boolean {
-  color: rgb(255, 88, 116);
+  /* color: rgb(255, 88, 116); */
+  color: rgb(255,50,80);
 }
 
 .token.property {
