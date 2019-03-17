@@ -7,18 +7,20 @@ bootstrapTheme.overrideThemeStyles = () => {
     body: {
       backgroundColor: '#1a1a1a',
     },
-    'h1, h2, h3, h4, h5, h6, li, code': {
-      color: 'white',
+    'h1, h2, h3, h4, h5, h6, a, li, code': {
+      color: '#e5e5e5',
     },
     // h1: {
     //   color: '#d62',
     // },
-    'p': {
+    p: {
       color: '#bbb',
-      fontSize: '1.1rem',
     },
     small: {
       color: '#37f',
+    },
+    a: {
+      textDecoration: 'none',
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
@@ -28,6 +30,7 @@ bootstrapTheme.overrideThemeStyles = () => {
 }
 
 //delete Wordpress2016.googleFonts
+delete bootstrapTheme.googleFonts
 
 const typography = new Typography(bootstrapTheme)
 

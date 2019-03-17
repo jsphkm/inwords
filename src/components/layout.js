@@ -13,13 +13,14 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(0.8),
+            ...scale(0.6),
             marginBottom: rhythm(1.5),
             marginTop: 0,
             display: 'flex',
             marginLeft: '50px',
             alignItems: 'center',
             height: '100%',
+            fontWeight: '200',
           }}
         >
           <Link
@@ -38,13 +39,14 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(0.8),
+            ...scale(0.6),
             marginBottom: rhythm(1.5),
             marginTop: 0,
             display: 'flex',
             marginLeft: '50px',
             alignItems: 'center',
             height: '100%',
+            fontWeight: '200',
           }}
         >
           <Link
@@ -75,14 +77,16 @@ class Layout extends React.Component {
             top: 0,
             left: 0,
             width: '100%',
-            height: '80px',
-            backgroundColor: '#111',
+            height: '60px',
+            backgroundColor: 'rgba(28,28,28,0.7)',
             zIndex: '1',
+            webkitBackdropFilter: 'blur(50px)',
+            borderBottom: '1px solid rgba(50,50,50,0.7)',
           }}
         >{header}</header>
         <main
           style={{
-            marginTop: '80px',
+            marginTop: '60px',
           }}
         >{children}</main>
         <footer>
