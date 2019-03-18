@@ -36,13 +36,16 @@ class BlogPostTemplate extends React.Component {
               </p>
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <footer>
+            <footer style={{
+              marginTop: '60px',
+            }}>
               <p>
                 <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
                   Twitter
-                </a>
+                </a>{' '}
+                &bull;{' '}
                 <a href={originalUrl} target="_blank" rel="noopener noreferrer">
-                  Suggest improvements
+                  GitHub
                 </a>
               </p>
             </footer>

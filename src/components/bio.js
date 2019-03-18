@@ -38,13 +38,23 @@ function Bio() {
               }}
             />
             <p>
-              Personal blog by
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
+              {/* Personal blog by
+              {` `} */}
+              <a href={`https://twitter.com/${social.twitter}`}
+                style={{
+                  fontSize: '1.2rem',
+                  fontWeight: '500',
+                }}
+              >
                 {author}
               </a>
               <br />
-              I attempt to elaborate using my words here.
+              <div style={{
+                opacity: '0.7',
+                fontSize: '0.95rem',
+              }}>
+                Full-Stack Web Developer
+              </div>
             </p>
           </div>
         )

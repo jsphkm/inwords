@@ -8,12 +8,13 @@ bootstrapTheme.overrideThemeStyles = () => {
     // 'h1, h2, h3, h4, h5, h6, a, li, code, footer': {
     //   color: '#e5e5e5',
     // },
-    'h1, h2, h3, h4, h5, h6, li': {
+    'h1, h2, h3, h4, h5, h6': {
       color: 'white',
     },
     
     body: {
       color: 'var(--textAll)',
+      // fontSize: '1.2rem',
     },
     // small: {
     //   color: '#37f',
