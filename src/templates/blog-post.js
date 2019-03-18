@@ -10,7 +10,8 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { previous, next, slug } = this.props.pageContext
+    const originalUrl = `https://github.com/jsphkm/inwords/edit/master/content/blog${slug}index.md`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,18 +19,33 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <main>
+          <article>
+            <header>
+              <h1>{post.frontmatter.title}</h1>
+              <p
+                style={{
+                  ...scale(-1 / 5),
+                  display: `block`,
+                  marginBottom: rhythm(1),
+                  marginTop: rhythm(-1),
+                }}
+              >
+                {post.frontmatter.date}
+              </p>
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <footer>
+              <p>
+                <a href={originalUrl} target="_blank" rel="noopener noreferrer">
+                  Suggest improvements
+                </a>
+              </p>
+            </footer>
+          </article>
+        </main>
+        
+        
         <hr
           style={{
             marginBottom: rhythm(1),

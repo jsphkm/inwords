@@ -6,12 +6,15 @@
 body {
   --offblack: #1a1a1a;
   background-color: var(--offblack);
-  /* --textLink: #6bf; */
-  --textLink: #ffaf50;
+  /* --textLink: rgb(100, 150, 235); */
+  --textLink: #e48f30;
   --textAll: #bbb;
   /* --inlineCode-bg: hsl(222, 14%, 25%); */
   /* --inlineCode-bg: hsl(222, 14%, 50%); */
-  --inlineCode-bg: hsl(224, 51%, 45%);
+  /* --inlineCode-bg: hsl(224, 51%, 45%); */
+  --inlineCode-bg: rgba(35,35,35,0.7);
+  --hr: rgba(255,255,255,0.2);
+
   /* --inlineCode-text: #e6e6e6; */
   --inlineCode-text: #eee;
 }
@@ -99,6 +102,7 @@ pre[class*='language-'] ::selection {
 /* Inline code */
 :not(pre) > code[class*='language-'] {
   border-radius: 0.3em;
+  border: 1px solid rgba(255,255,255,0.2);
   background: var(--inlineCode-bg);
   color: var(--inlineCode-text);
   /* padding: 0.15em 0.2em 0.05em; */

@@ -19,6 +19,10 @@ bootstrapTheme.overrideThemeStyles = () => {
     //   color: '#37f',
     // },
 
+    hr: {
+      background: 'var(--hr)',
+    },
+
     a: {
       color: 'var(--textLink)',
       textDecoration: 'none',
