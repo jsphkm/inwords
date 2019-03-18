@@ -12,6 +12,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next, slug } = this.props.pageContext
     const originalUrl = `https://github.com/jsphkm/inwords/edit/master/content/blog${slug}index.md`;
+    const twitterUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(`https://inwords.netlify.com${slug}`)}`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -37,6 +38,9 @@ class BlogPostTemplate extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <footer>
               <p>
+                <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
+                  Twitter
+                </a>
                 <a href={originalUrl} target="_blank" rel="noopener noreferrer">
                   Suggest improvements
                 </a>
@@ -44,39 +48,40 @@ class BlogPostTemplate extends React.Component {
             </footer>
           </article>
         </main>
-        
-        
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
+        <aside>  
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
+            />
+          <Bio />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+              marginLeft: 0,
+            }}
+            >
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </aside>
       </Layout>
     )
   }

@@ -13,7 +13,7 @@ body {
   /* --inlineCode-bg: hsl(222, 14%, 50%); */
   /* --inlineCode-bg: hsl(224, 51%, 45%); */
   --inlineCode-bg: rgba(35,35,35,0.7);
-  --hr: rgba(255,255,255,0.2);
+  --hr: rgba(110,110,110,0.2);
 
   /* --inlineCode-text: #e6e6e6; */
   --inlineCode-text: #eee;

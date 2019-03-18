@@ -14,10 +14,9 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(0.4),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
+            // marginBottom: rhythm(1.5),
+            margin: 0,
             display: 'flex',
-            marginLeft: '50px',
             alignItems: 'center',
             height: '100%',
           }}
@@ -39,10 +38,8 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(0.4),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
+            margin: 0,
             display: 'flex',
-            marginLeft: '50px',
             alignItems: 'center',
             height: '100%',
           }}
@@ -81,13 +78,26 @@ class Layout extends React.Component {
             zIndex: '1',
             WebkitBackdropFilter: 'blur(50px)',
             borderBottom: '1px solid rgba(50,50,50,0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
-        >{header}</header>
-        <main
-          style={{
+        >
+          <div
+            style={{
+              width: '100%',
+              maxWidth: rhythm(34),
+              padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            }}
+          >
+            {header}
+          </div>
+        </header>
+        <div style={{
             marginTop: '52px',
-          }}
-        >{children}</main>
+          }}>
+          {children}
+        </div>
         <footer
           style={{
             marginTop: rhythm(2.5),
