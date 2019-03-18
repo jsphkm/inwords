@@ -38,13 +38,19 @@ function Bio() {
               }}
             />
             <p>
-              Personal blog by
-              {` `}
+              {/* Personal blog by
+              {` `} */}
               <a href={`https://twitter.com/${social.twitter}`}>
                 {author}
               </a>
               <br />
-              I attempt to elaborate using my words here.
+              <div style={{
+                opacity: '0.7',
+                fontSize: '0.9rem',
+              }}>
+                {/* Full-Stack Web Developer */}
+                Maintainer of Inwords
+              </div>
             </p>
           </div>
         )
