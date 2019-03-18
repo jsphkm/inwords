@@ -12,7 +12,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next, slug } = this.props.pageContext
     const originalUrl = `https://github.com/jsphkm/inwords/edit/master/content/blog${slug}index.md`;
-    const twitterUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(`https://inwords.netlify.com${slug}`)}`;
+    const twitterUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(`manythunks https://inwords.netlify.com${slug}`)}`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -39,13 +39,17 @@ class BlogPostTemplate extends React.Component {
             <footer style={{
               marginTop: '60px',
             }}>
-              <p>
+              
+              <p style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
                 <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
-                  Twitter
-                </a>{' '}
-                &bull;{' '}
+                  Comment on Twitter
+                </a>
                 <a href={originalUrl} target="_blank" rel="noopener noreferrer">
-                  GitHub
+                  Contribute on Github
                 </a>
               </p>
             </footer>

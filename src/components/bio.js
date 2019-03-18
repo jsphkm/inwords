@@ -40,20 +40,16 @@ function Bio() {
             <p>
               {/* Personal blog by
               {` `} */}
-              <a href={`https://twitter.com/${social.twitter}`}
-                style={{
-                  fontSize: '1.2rem',
-                  fontWeight: '500',
-                }}
-              >
+              <a href={`https://twitter.com/${social.twitter}`}>
                 {author}
               </a>
               <br />
               <div style={{
                 opacity: '0.7',
-                fontSize: '0.95rem',
+                fontSize: '0.9rem',
               }}>
-                Full-Stack Web Developer
+                {/* Full-Stack Web Developer */}
+                Maintainer of Inwords
               </div>
             </p>
           </div>

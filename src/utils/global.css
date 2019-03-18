@@ -8,7 +8,7 @@ body {
   background-color: var(--offblack);
   /* --textLink: rgb(100, 150, 235); */
   --textLink: #e48f30;
-  --textAll: #bbb;
+  --offWhite: #bbb;
   /* --inlineCode-bg: hsl(222, 14%, 25%); */
   /* --inlineCode-bg: hsl(222, 14%, 50%); */
   /* --inlineCode-bg: hsl(224, 51%, 45%); */
