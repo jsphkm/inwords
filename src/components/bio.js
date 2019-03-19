@@ -51,6 +51,20 @@ function Bio() {
                 {/* Full-Stack Web Developer */}
                 Maintainer of Inwords
               </div>
+              <div>
+                <a
+                  href="https://twitter.com/manythunks?ref_src=twsrc%5Etfw" 
+                  class="twitter-follow-button"
+                >
+                  <Image
+                    fixed={data.social.childImageSharp.fixed}
+                    alt="twitter-logo"
+                    style={{
+                      opacity: '0.5',
+                    }}
+                  />
+                </a>
+              </div>
             </p>
           </div>
         )
@@ -73,6 +87,13 @@ const bioQuery = graphql`
         author
         social {
           twitter
+        }
+      }
+    }
+    social: file(absolutePath: { regex: "/Twitter_Logo_WhiteOnImage.png/" }) {
+      childImageSharp {
+        fixed(width: 28, height: 28) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

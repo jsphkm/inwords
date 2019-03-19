@@ -11,6 +11,9 @@ A theme for Typography.js
 ```bash
 npm install --save typography typography-theme-bootstrap
 ```
+
+<script src="https://gist.github.com/jsphkm/b9a7eb6dcfc2cb861e684d5b3936af9a.js"></script>
+
 ## Usage
 ```javascript
 import Typography from 'typography'
