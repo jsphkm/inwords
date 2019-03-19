@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
             console.log(idx);
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <div key={node.fields.slug} style={{marginBottom: '1.5rem'}}>
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),
@@ -40,12 +40,12 @@ class BlogIndex extends React.Component {
                   {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
+                <small>{node.frontmatter.date}</small>
               </div>
             )
           })}
