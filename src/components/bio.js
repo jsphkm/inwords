@@ -37,7 +37,7 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
+            <div>
               {/* Personal blog by
               {` `} */}
               <a href={`https://twitter.com/${social.twitter}`}>
@@ -54,7 +54,7 @@ function Bio() {
               <div>
                 <a
                   href="https://twitter.com/manythunks?ref_src=twsrc%5Etfw" 
-                  class="twitter-follow-button"
+                  className="twitter-follow-button"
                 >
                   <Image
                     fixed={data.social.childImageSharp.fixed}
@@ -65,7 +65,7 @@ function Bio() {
                   />
                 </a>
               </div>
-            </p>
+            </div>
           </div>
         )
       }}

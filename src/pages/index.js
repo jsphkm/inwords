@@ -21,7 +21,8 @@ class BlogIndex extends React.Component {
         <Bio />
         <div>
           {posts.map(({ node }, idx) => {
-            console.log(idx);
+            // `idx` returns the index of each posts in the array
+            console.log(node.timeToRead);
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug} style={{marginBottom: '1.5rem'}}>
@@ -45,7 +46,7 @@ class BlogIndex extends React.Component {
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-                <small>{node.frontmatter.date}</small>
+                <small>{node.frontmatter.date} • {node.timeToRead} min read</small>
               </div>
             )
           })}
@@ -71,6 +72,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
