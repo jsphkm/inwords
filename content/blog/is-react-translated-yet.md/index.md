@@ -1,6 +1,7 @@
 ---
 title: "Is React Translated Yet? ¡Sí! Sim! はい！"
 author: [tesseralis]
+date: '2019-03-23'
 ---
 
 We’re excited to announce an ongoing effort to maintain official translations of the React documentation website into different languages. Thanks to the dedicated efforts of React community members from around the world, React is now being translated into *over 30* languages! You can find them on the new [Languages](/languages) page.

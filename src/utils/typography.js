@@ -49,6 +49,7 @@ bootstrapTheme.overrideThemeStyles = () => {
       // backgroundColor: 'hsla(0, 0%, 30%, 0.1)',
       color: 'rgba(255,255,255,1)',
       // boxShadow: '0px 0px 20px rgba(0,0,0,0.5)',
+      fontSize: '1.1rem',
     },
   }
 }

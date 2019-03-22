@@ -18,7 +18,7 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
+        {/* <Bio /> */}
         <div>
           {posts.map(({ node }, idx) => {
             // `idx` returns the index of each posts in the array
