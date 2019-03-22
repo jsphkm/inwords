@@ -14,7 +14,7 @@ bootstrapTheme.overrideThemeStyles = () => {
 
     p: {
       // color: 'white',
-      lineHeight: '1.9rem',
+      lineHeight: '1.8rem',
       fontSize: '1.1rem',
     },
     
@@ -42,10 +42,10 @@ bootstrapTheme.overrideThemeStyles = () => {
     },
 
     blockquote: {
-      margin: '1.3125rem -1.3125rem',
-      padding: '1.3125rem',
-      borderLeft: '0.25rem solid #dfbb04',
-      backgroundColor: 'rgba(255,200,80, 0.1)',
+      margin: '1.3125rem -1.3125rem 2.3125rem -1.3125rem',
+      padding: '1.1rem 1.1rem',
+      borderLeft: '0.25rem solid #fbc420',
+      backgroundColor: 'rgba(255,225,0, 0.1)',
       color: 'rgba(255,255,255,1)',
     },
 
