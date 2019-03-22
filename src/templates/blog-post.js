@@ -22,18 +22,40 @@ class BlogPostTemplate extends React.Component {
         />
         <main>
           <article>
+            {/* <p style={{
+              // color: 'rgb(215,50,50)',
+              // fontFamily: 'Georgia',
+              margin: '0 0 0.5rem 0',
+              fontSize: '0.95rem',
+              }}>
+            COMPONENTS</p> */}
             <header>
-              <h1>{post.frontmatter.title}</h1>
+              <h1 style={{
+                margin: '0',
+                fontSize: '2.5rem',
+              }}
+              >{post.frontmatter.title}</h1>
+              <p style={{
+                fontSize: '1.4rem',
+                marginBottom: rhythm(0.5),
+              }}>{post.frontmatter.description}</p>
+              {/* <p style={{
+                fontSize: '1rem',
+                marginBottom: '0'
+              }}>  
+                Written by <a href={`https://twitter.com/manythunks`}>Joseph Kim</a>
+              </p> */}
               <p
                 style={{
                   ...scale(-1 / 5),
                   display: `block`,
-                  marginBottom: rhythm(1),
-                  marginTop: rhythm(-1),
+                  marginBottom: rhythm(2),
+                  opacity: '0.5',
                 }}
               >
-                {post.frontmatter.date}
+                {post.frontmatter.date} • {post.timeToRead} min read
               </p>
+              
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <footer style={{
@@ -108,9 +130,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM D, YYYY")
         description
       }
     }

@@ -202,13 +202,14 @@ pre[data-line] {
   overflow: auto;
 }
 
+.gatsby-highlight pre[class*='language-'] {
+  float: left;
+  min-width: 100%;
+}
+
 @media (max-width: 672px) {
   .gatsby-highlight {
     border-radius: 0;
   }
 }
 
-.gatsby-highlight pre[class*='language-'] {
-  float: left;
-  min-width: 100%;
-}

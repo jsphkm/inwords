@@ -1,7 +1,7 @@
 ---
 title: How Does setState Know What to Do?
 date: '2018-12-09'
-spoiler: Dependency injection is nice if you don’t have to think about it.
+description: Dependency injection is nice if you don’t have to think about it.
 ---
 
 When you call `setState` in a component, what do you think happens?

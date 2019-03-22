@@ -37,35 +37,35 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
+            <div>
               {/* Personal blog by
               {` `} */}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                {author}
-              </a>
-              <br />
               <div style={{
                 opacity: '0.7',
                 fontSize: '0.9rem',
               }}>
                 {/* Full-Stack Web Developer */}
-                Maintainer of Inwords
+                Written by
               </div>
+              {/* <br /> */}
+              <a href={`https://twitter.com/${social.twitter}`}>
+                {author}
+              </a>
               <div>
                 <a
                   href="https://twitter.com/manythunks?ref_src=twsrc%5Etfw" 
-                  class="twitter-follow-button"
+                  className="twitter-follow-button"
                 >
-                  <Image
+                  {/* <Image
                     fixed={data.social.childImageSharp.fixed}
                     alt="twitter-logo"
                     style={{
                       opacity: '0.5',
                     }}
-                  />
+                  /> */}
                 </a>
               </div>
-            </p>
+            </div>
           </div>
         )
       }}
