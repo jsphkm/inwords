@@ -15,7 +15,7 @@ bootstrapTheme.overrideThemeStyles = () => {
     p: {
       // color: 'white',
       lineHeight: '1.8rem',
-      fontSize: '1.1rem',
+      // fontSize: '1.1rem',
     },
     
     body: {

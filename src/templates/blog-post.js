@@ -30,7 +30,7 @@ class BlogPostTemplate extends React.Component {
               <p>{post.frontmatter.description}</p>
               <p
                 style={{
-                  ...scale(-1 / 5),
+                  ...scale(-1 / 10),
                   display: `block`,
                   marginBottom: rhythm(2),
                   marginTop: rhythm(-1),

@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
                 />
                 <p
                   style={{
-                    fontSize: '1rem',
+                    fontSize: '0.95rem',
                     // marginBottom: '0.5rem',
                     opacity: '0.5',
                   }}
