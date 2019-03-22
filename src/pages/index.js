@@ -22,19 +22,19 @@ class BlogIndex extends React.Component {
         <div>
           {posts.map(({ node }, idx) => {
             // `idx` returns the index of each posts in the array
-            console.log(node.timeToRead);
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug} style={{marginBottom: '1.5rem'}}>
+              <div key={node.fields.slug} style={{marginBottom: '2.5rem'}}>
                 <h3
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    marginBottom: rhythm(1 / 10),
                   }}
                 >
                   <Link
                     style={{
                       boxShadow: `none`,
-    
+                      fontSize: '1.7rem',
+                      color: 'white',
                     }}
                     to={node.fields.slug}
                   >
@@ -44,6 +44,9 @@ class BlogIndex extends React.Component {
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
+                  }}
+                  style={{
+                    marginBottom: '0.4rem',
                   }}
                 />
                 <small>{node.frontmatter.date} • {node.timeToRead} min read</small>
@@ -74,7 +77,7 @@ export const pageQuery = graphql`
           }
           timeToRead
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM D, YYYY")
             title
             description
           }
