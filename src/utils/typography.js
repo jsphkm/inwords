@@ -14,6 +14,8 @@ bootstrapTheme.overrideThemeStyles = () => {
 
     p: {
       // color: 'white',
+      lineHeight: '1.9rem',
+      fontSize: '1.1rem',
     },
     
     body: {
@@ -37,6 +39,14 @@ bootstrapTheme.overrideThemeStyles = () => {
 
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
+    },
+
+    blockquote: {
+      margin: '1.3125rem -1.3125rem',
+      padding: '1.3125rem',
+      borderLeft: '0.25rem solid #dfbb04',
+      backgroundColor: 'rgba(255,200,80, 0.1)',
+      color: 'rgba(255,255,255,1)',
     },
 
   }

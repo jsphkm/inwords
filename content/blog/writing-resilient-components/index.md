@@ -1,7 +1,7 @@
 ---
 title: Writing Resilient Components
 date: '2019-03-16'
-spoiler: Four principles to set you on the right path.
+description: Four principles to set you on the right path.
 ---
 
 When people start learning React, they often ask for a style guide. While it’s a good idea to have some consistent rules applied across a project, a lot of them are arbitrary — and so React doesn’t have a strong opinion about them.
