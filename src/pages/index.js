@@ -42,19 +42,21 @@ class BlogIndex extends React.Component {
                   </Link>
                 </h3>
                 <p
-                  style={{
-                    fontSize: '1rem',
-                    marginBottom: '0.5rem',
-                  }}
-                >{node.frontmatter.date} • {node.timeToRead} min read</p>
-                <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                   style={{
-                    marginTop: '0.2rem',
+                    // marginTop: '0.2rem',
+                    margin: '0',
                   }}
                 />
+                <p
+                  style={{
+                    fontSize: '1rem',
+                    // marginBottom: '0.5rem',
+                    opacity: '0.5',
+                  }}
+                >{node.frontmatter.date} • {node.timeToRead} min read</p>
               </div>
             )
           })}

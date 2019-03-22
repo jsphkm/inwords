@@ -6,6 +6,7 @@ redirect_from:
   - "docs/add-react-to-an-existing-app.html"
 prev: getting-started.html
 next: create-a-new-react-app.html
+date: "2019-03-22"
 ---
 
 Use as little or as much React as you need.

@@ -23,13 +23,18 @@ class BlogPostTemplate extends React.Component {
         <main>
           <article>
             <header>
-              <h1>{post.frontmatter.title}</h1>
+              <h1 style={{
+                margin: '0',
+              }}
+              >{post.frontmatter.title}</h1>
+              <p>{post.frontmatter.description}</p>
               <p
                 style={{
                   ...scale(-1 / 5),
                   display: `block`,
-                  marginBottom: rhythm(1),
+                  marginBottom: rhythm(2),
                   marginTop: rhythm(-1),
+                  opacity: '0.5',
                 }}
               >
                 {post.frontmatter.date} • {post.timeToRead} min read
