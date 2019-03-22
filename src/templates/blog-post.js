@@ -39,12 +39,12 @@ class BlogPostTemplate extends React.Component {
                 fontSize: '1.4rem',
                 marginBottom: rhythm(0.5),
               }}>{post.frontmatter.description}</p>
-              <p style={{
+              {/* <p style={{
                 fontSize: '1rem',
                 marginBottom: '0'
               }}>  
                 Written by <a href={`https://twitter.com/manythunks`}>Joseph Kim</a>
-              </p>
+              </p> */}
               <p
                 style={{
                   ...scale(-1 / 5),
