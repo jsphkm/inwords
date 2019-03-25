@@ -7,7 +7,7 @@ bootstrapTheme.overrideThemeStyles = () => {
   return {
     
     p: {
-      lineHeight: '1.8rem',
+      lineHeight: '1.5rem',
     },
     
     body: {
