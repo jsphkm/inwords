@@ -5,17 +5,34 @@
 
 body {
   --offblack: #1a1a1a;
-  background-color: var(--offblack);
-  /* --textLink: rgb(100, 150, 235); */
-  --textLink: #e48f30;
   --offWhite: #bbb;
-  /* --inlineCode-bg: hsl(222, 14%, 25%); */
-  /* --inlineCode-bg: hsl(222, 14%, 50%); */
-  /* --inlineCode-bg: hsl(224, 51%, 45%); */
+  --headersColor: 'white';
+  --textColor: var(--offWhite);
+  background-color: var(--offblack);
+  --textLink: #e48f30;
   --inlineCode-bg: rgba(35,35,35,0.7);
-  --hr: rgba(110,110,110,0.2);
+  --hr: rgba(110,110,110,0.5);
+  --inlineCode-text: #eee;
+}
 
-  /* --inlineCode-text: #e6e6e6; */
+body.light {
+  --headersColor: 'black';
+  --bgColor: var(--offWhite);
+  --textLink: 'cornflowerblue';
+  --textColor: --offblack;
+  --inlineCode-bg: rgba(35,35,35,0.7);
+  --hr: rgba(110,110,110,0.5);
+  --inlineCode-text: #111;
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --headersColor: 'white';
+  --bgColor: var(--offblack);
+  --textLink: #e48f30;
+  --textColor: var(--offWhite);
+  --inlineCode-bg: rgba(35,35,35,0.7);
+  --hr: rgba(110,110,110,0.5);
   --inlineCode-text: #eee;
 }
 
@@ -43,9 +60,6 @@ body.dark {
   --inlineCode-text: #e6e6e6;
 } */
 
-/**
- * Based on copypasta from Remy Bach and Sarah Drasner
- */
 code[class*='language-'],
 pre[class*='language-'] {
   color: white;
@@ -105,7 +119,6 @@ pre[class*='language-'] ::selection {
   border: 1px solid rgba(255,255,255,0.2);
   background: var(--inlineCode-bg);
   color: var(--inlineCode-text);
-  /* padding: 0.15em 0.2em 0.05em; */
   padding: 0.15em 0.25em 0.05em;
   white-space: normal;
 }
@@ -121,7 +134,6 @@ pre[class*='language-'] ::selection {
 
 .token.string,
 .token.url {
-  /* color: rgb(173, 219, 103); */
   color: rgb(255, 130, 103);
 }
 
@@ -157,12 +169,10 @@ pre[class*='language-'] ::selection {
 .token.tag,
 .token.operator,
 .token.keyword {
-  /* color: #ffa7c4; */
   color: #e79;
 }
 
 .token.boolean {
-  /* color: rgb(255, 88, 116); */
   color: rgb(255,50,80);
 }
 
@@ -180,14 +190,12 @@ pre[data-line] {
 }
 
 .gatsby-highlight-code-line {
-  /* background-color: hsla(207, 95%, 15%, 1); */
   background-color: rgba(40, 43, 49, 0.9);
   display: block;
   margin-right: -1.3125rem;
   margin-left: -1.3125rem;
   padding-right: 1em;
   padding-left: 1.25em;
-  /* border-left: 0.25em solid #ffa7c4; */
   border-left: 0.25em solid #59f;
 }
 
@@ -196,7 +204,6 @@ pre[data-line] {
   margin-left: -1.3125rem;
   margin-right: -1.3125rem;
   border-radius: 10px;
-  /* background: #011627; */
   background: #222428;
   -webkit-overflow-scrolling: touch;
   overflow: auto;

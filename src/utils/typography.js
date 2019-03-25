@@ -5,25 +5,14 @@ import './global.css';
 
 bootstrapTheme.overrideThemeStyles = () => {
   return {
-    // 'h1, h2, h3, h4, h5, h6, a, li, code, footer': {
-    //   color: '#e5e5e5',
-    // },
-    'h1, h2, h3, h4, h5, h6': {
-      color: 'white',
-    },
-
+    
     p: {
-      // color: 'white',
       lineHeight: '1.8rem',
-      // fontSize: '1.1rem',
     },
     
     body: {
-      color: 'var(--offWhite)',
+      color: 'var(--textColor)',
     },
-    // small: {
-    //   color: '#37f',
-    // },
 
     hr: {
       background: 'var(--hr)',
@@ -43,13 +32,11 @@ bootstrapTheme.overrideThemeStyles = () => {
 
     blockquote: {
       margin: '1.3125rem -1.3125rem 2.3125rem -1.3125rem',
-      padding: '1.1rem 1.1rem',
+      padding: '1rem 1.1rem',
       borderLeft: '0.25rem solid #fbc420',
-      // backgroundColor: 'rgba(225,150,0, 0.3)',
-      // backgroundColor: 'hsla(0, 0%, 30%, 0.1)',
-      color: 'rgba(255,255,255,1)',
-      // boxShadow: '0px 0px 20px rgba(0,0,0,0.5)',
-      fontSize: '1.1rem',
+      opacity: '0.9',
+      boxShadow: '0px 0px 10px rgba(0,0,0,0.4)',
+      fontSize: '1rem',
     },
   }
 }

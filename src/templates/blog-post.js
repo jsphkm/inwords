@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
               </p> */}
               <p
                 style={{
-                  ...scale(-1 / 5),
+                  ...scale(-1 / 10),
                   display: `block`,
                   marginBottom: rhythm(2),
                   opacity: '0.5',
@@ -59,7 +59,7 @@ class BlogPostTemplate extends React.Component {
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <footer style={{
-              marginTop: '60px',
+              // marginTop: '60px',
             }}>
               
               <p style={{
@@ -68,7 +68,7 @@ class BlogPostTemplate extends React.Component {
                 justifyContent: 'space-between',
               }}>
                 <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
-                  Comment on Twitter
+                  Discuss on Twitter
                 </a>
                 <a href={originalUrl} target="_blank" rel="noopener noreferrer">
                   Edit this page
@@ -81,6 +81,7 @@ class BlogPostTemplate extends React.Component {
           <hr
             style={{
               marginBottom: rhythm(1),
+              marginTop: '60px'
             }}
             />
           <Bio />
