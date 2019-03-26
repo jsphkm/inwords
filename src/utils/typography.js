@@ -5,6 +5,10 @@ import './global.css';
 
 bootstrapTheme.overrideThemeStyles = () => {
   return {
+
+    'h1, h2, h3, h4, h5, h6': {
+      marginBottom: '1rem',
+    },
     
     p: {
       lineHeight: '1.5rem',

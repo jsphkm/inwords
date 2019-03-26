@@ -14,7 +14,6 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(0.4),
-            // marginBottom: rhythm(1.5),
             margin: 0,
             display: 'flex',
             alignItems: 'center',
@@ -25,7 +24,7 @@ class Layout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `white`,
             }}
             to={`/`}
           >
@@ -48,7 +47,7 @@ class Layout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `white`,
             }}
             to={`/`}
           >
