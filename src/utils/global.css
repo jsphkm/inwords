@@ -4,8 +4,9 @@
 } */
 
 body {
-  --offblack: #1a1a1a;
-  --offWhite: #bbb;
+  --offblack: #11100f;
+  --offWhite: #a5a5a5;
+  --white: #fff;
   --headersColor: 'white';
   --textColor: var(--offWhite);
   background-color: var(--offblack);
