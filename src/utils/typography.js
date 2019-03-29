@@ -38,10 +38,10 @@ bootstrapTheme.overrideThemeStyles = () => {
     blockquote: {
       // margin: '1.3125rem -1.3125rem 2.3125rem -1.3125rem',
       margin: '1.3125rem -1rem 2.3125rem -1rem',
-      padding: '1rem 1.1rem',
+      padding: '1rem 1rem',
       borderLeft: '0.25rem solid #fbc420',
       opacity: '0.9',
-      boxShadow: '0px 0px 10px rgba(0,0,0,0.4)',
+      // boxShadow: '0px 0px 10px rgba(0,0,0,0.4)',
       fontSize: '1rem',
     },
   }
