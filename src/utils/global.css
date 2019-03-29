@@ -14,6 +14,7 @@ body {
   --inlineCode-bg: rgba(35,35,35,0.7);
   --hr: rgba(110,110,110,0.5);
   --inlineCode-text: #eee;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.light {
@@ -88,7 +89,8 @@ pre[class*='language-'] {
 /* Code blocks */
 pre[class*='language-'] {
   overflow: auto;
-  padding: 1.3125rem;
+  /* padding: 1.3125rem; */
+  padding: 1rem;
 }
 
 pre[class*='language-']::-moz-selection {
@@ -193,17 +195,22 @@ pre[data-line] {
 .gatsby-highlight-code-line {
   background-color: rgba(40, 43, 49, 0.9);
   display: block;
-  margin-right: -1.3125rem;
-  margin-left: -1.3125rem;
+  /* margin-right: -1.3125rem; */
+  margin-right: -1rem;
+  /* margin-left: -1.3125rem; */
+  margin-left: -1rem;
   padding-right: 1em;
-  padding-left: 1.25em;
+  /* padding-left: 1.25em; */
+  padding-left: 1em;
   border-left: 0.25em solid #59f;
 }
 
 .gatsby-highlight {
   margin-bottom: 1.75rem;
-  margin-left: -1.3125rem;
-  margin-right: -1.3125rem;
+  /* margin-left: -1.3125rem; */
+  margin-left: -1rem;
+  /* margin-right: -1.3125rem; */
+  margin-right: -1rem;
   border-radius: 10px;
   background: #222428;
   -webkit-overflow-scrolling: touch;
