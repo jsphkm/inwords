@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -18,39 +18,49 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link
+        {/* <Bio /> */}
+        <div>
+          {posts.map(({ node }, idx) => {
+            // `idx` returns the index of each posts in the array
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <div key={node.fields.slug} style={{marginBottom: '2.5rem'}}>
+                <h3
                   style={{
-                    boxShadow: `none`,
-                    fontFamily: 'Roboto'
+                    marginBottom: rhythm(1 / 20),
                   }}
-                  to={node.fields.slug}
                 >
-                {title}
-                </Link>
-              </h3>
-              <small
-              style={{
-                fontFamily: 'Roboto'
-              }}
-              >{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
+                  <Link
+                    style={{
+                      boxShadow: `none`,
+                      fontSize: '1.7rem',
+                      // color: 'white',
+                    }}
+                    to={node.fields.slug}
+                  >
+                  {title}
+                  </Link>
+                </h3>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                  style={{
+                    // marginTop: '0.2rem',
+                    margin: '0',
+                  }}
+                />
+                <p
+                  style={{
+                    fontSize: '0.95rem',
+                    // marginBottom: '0.5rem',
+                    opacity: '0.5',
+                  }}
+                >{node.frontmatter.date} • {node.timeToRead} min read</p>
+              </div>
+            )
+          })}
+        </div>
       </Layout>
     )
   }
@@ -72,8 +82,9 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM D, YYYY")
             title
             description
           }

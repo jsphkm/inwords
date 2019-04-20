@@ -10,7 +10,9 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { previous, next, slug } = this.props.pageContext
+    const originalUrl = `https://github.com/jsphkm/inwords/edit/master/content/blog${slug}index.md`;
+    const twitterUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(`https://inwords.netlify.com${slug}`)}`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,50 +20,98 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-            fontFamily: 'Roboto',
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
+        <main>
+          <article>
+            {/* <p style={{
+              // color: 'rgb(215,50,50)',
+              // fontFamily: 'Georgia',
+              margin: '0 0 0.5rem 0',
+              fontSize: '0.95rem',
+              }}>
+            COMPONENTS</p> */}
+            <header>
+              <h1 style={{
+                margin: '0',
+                fontSize: '2.5rem',
+              }}
+              >{post.frontmatter.title}</h1>
+              <p style={{
+                fontSize: '1.4rem',
+                marginBottom: rhythm(0.5),
+              }}>{post.frontmatter.description}</p>
+              {/* <p style={{
+                fontSize: '1rem',
+                marginBottom: '0'
+              }}>  
+                Written by <a href={`https://twitter.com/manythunks`}>Joseph Kim</a>
+              </p> */}
+              <p
+                style={{
+                  ...scale(-1 / 10),
+                  display: `block`,
+                  marginBottom: rhythm(2),
+                  opacity: '0.5',
+                }}
+              >
+                {post.frontmatter.date} • {post.timeToRead} min read
+              </p>
+              
+            </header>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <footer style={{
+              // marginTop: '60px',
+            }}>
+              
+              <p style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+                <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
+                  Discuss on Twitter
+                </a>
+                <a href={originalUrl} target="_blank" rel="noopener noreferrer">
+                  Edit this page
+                </a>
+              </p>
+            </footer>
+          </article>
+        </main>
+        <aside>  
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+              marginTop: '60px'
+            }}
+            />
+          <Bio />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+              marginLeft: 0,
+            }}
+            >
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </aside>
       </Layout>
     )
   }
@@ -81,9 +131,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM D, YYYY")
         description
       }
     }

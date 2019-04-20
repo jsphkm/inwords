@@ -37,15 +37,35 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Personal blog by
-              {` `}
+            <div>
+              {/* Personal blog by
+              {` `} */}
+              <div style={{
+                opacity: '0.7',
+                fontSize: '0.9rem',
+              }}>
+                {/* Full-Stack Web Developer */}
+                Written by
+              </div>
+              {/* <br /> */}
               <a href={`https://twitter.com/${social.twitter}`}>
                 {author}
               </a>
-              <br />
-              I attempt to elaborate using my words here.
-            </p>
+              <div>
+                <a
+                  href="https://twitter.com/manythunks?ref_src=twsrc%5Etfw" 
+                  className="twitter-follow-button"
+                >
+                  {/* <Image
+                    fixed={data.social.childImageSharp.fixed}
+                    alt="twitter-logo"
+                    style={{
+                      opacity: '0.5',
+                    }}
+                  /> */}
+                </a>
+              </div>
+            </div>
           </div>
         )
       }}
@@ -67,6 +87,13 @@ const bioQuery = graphql`
         author
         social {
           twitter
+        }
+      }
+    }
+    social: file(absolutePath: { regex: "/Twitter_Logo_WhiteOnImage.png/" }) {
+      childImageSharp {
+        fixed(width: 28, height: 28) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
